@@ -1,0 +1,35 @@
+class Employee:  ### Class : keyword... Employee : name of class and first letter should be capital
+    id = 202                ## Attribute
+    name = "Abhinav"        ## Attribute
+    address = "Banglore"    ## Attribute
+    salary = "60000000"     ## Attribute
+
+    def getempdetails(self):       ###Object Method 
+        print(f"Id = {self.id}, name : {self.name}, address : {self.address}, salary :{self.salary}, Mobile :{self.Mobile}")    ##object attribute
+        print(f"Id = {Employee.id}, name : {Employee.name}, address : {Employee.address}, salary :{Employee.salary}")  #class attribute
+                #self nahi dete to class k andar k attributes ko capture nahi karat
+                #self is as good as object/parameter of class Employee
+                #only after creating objecct/instatiation, memory will be allocated to attributes
+
+
+    @staticmethod           ###decorator ### not concerned with class attributes
+    def getcodetails():      ###by giving static method decorator, we specify, do not pass self in first parameter
+                                            ###while calling method with object
+       print("Co name is Pathway")
+
+    def getempbonus(self,percent):
+       bonus = int(self.salary) * percent   
+       print("bonus is ", bonus)
+    @staticmethod
+    def isadult(age)-> bool:
+        if (age>=20):
+            return True
+        return False
+
+
+
+emp=Employee()
+Employee.getcodetails()
+emp.getcodetails()      ###will get output as we have assigned decorator to it
+result=emp.isadult(20)
+print(result)

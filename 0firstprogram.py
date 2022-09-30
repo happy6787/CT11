@@ -1,0 +1,6 @@
+print("NikNav")
+print("JaiShreeRadhe")
+print("JaiShreeKrishna")
+print("Sayabh Kripa")
+print('RamRamSa')
+exit()
